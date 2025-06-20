@@ -1,0 +1,23 @@
+{
+  "name": "03-api-solid",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./build/server.cjs",
+    "dev": "tsx watch ./src/server.ts",
+    "build": "tsup ./src/ --out-dir ./build/"
+  },
+  "author": "Wanderson Alves",
+  "license": "MIT",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^24.0.3",
+    "tsup": "^8.5.0",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "fastify": "^5.4.0"
+  }
+}
