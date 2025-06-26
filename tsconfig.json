@@ -1,12 +1,10 @@
 {
   "compilerOptions": {
     /* Language and Environment */
-    "lib": [
-      "ES2023"
-    ],
-    "target": "ES2023", /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+    // "lib": [  "ES2023"],
+    "target": "es2020", /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
     /* Modules */
-    "module": "nodenext", /* Specify what module code is generated. */
+    "module": "commonjs", /* Specify what module code is generated. */
     "baseUrl": "./", /* Specify the base directory to resolve non-relative module names. */
     "paths": {
       "@/*": [
