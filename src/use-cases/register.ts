@@ -9,6 +9,7 @@ interface RegisterUseCaseRequest {
 }
 
 export class RegisterUseCase {
+  // eslint-disable-next-line prettier/prettier
   constructor(private usersRepository: UsersRepository) { }
 
   async execute({ name, email, password }: RegisterUseCaseRequest) {
@@ -21,10 +22,14 @@ export class RegisterUseCase {
     const hashSaltRounds = 6;
     const password_hash = await hash(password, hashSaltRounds);
 
-    await this.usersRepository.create({
+    const user = await this.usersRepository.create({
       name,
       email,
       password_hash,
     });
+
+    return {
+      user,
+    };
   }
 }

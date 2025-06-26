@@ -3,21 +3,17 @@
     "@rocketseat/eslint-config/node"
   ],
   "rules": {
-    "camelcase": "off",
     "no-useless-constructor": "off",
-    "no-empty-function": [
-      "error",
-      {
-        "allow": [
-          "constructor"
-        ]
-      }
-    ],
+    "no-empty": "off",
+    "camelcase": "off",
     "prettier/prettier": [
       "error",
       {
         "endOfLine": "auto",
-        "singleQuote": true
+        "singleQuote": true,
+        "trailingComma": "all",
+        "semi": true,
+        "bracketSpacing": true
       }
     ]
   }
