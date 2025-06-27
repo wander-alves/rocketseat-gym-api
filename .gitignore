@@ -1,7 +1,4 @@
 node_modules
+coverage
 build
 .env
-
-/generated/prisma
-
-/generated/prisma
