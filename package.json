@@ -1,7 +1,7 @@
 {
-  "name": "03-api-solid",
+  "name": "rocketseat-gym-api",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./build/server.cjs",
   "scripts": {
     "start": "node ./build/server.cjs",
     "dev": "tsx watch ./src/server.ts",
