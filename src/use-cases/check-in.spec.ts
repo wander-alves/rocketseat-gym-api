@@ -23,8 +23,8 @@ describe('Check-in Use Case', () => {
       title: 'BigInt',
       description: '',
       phone: '',
-      latitude: new Decimal(0),
-      longitude: new Decimal(0),
+      latitude: new Decimal(-23.6690126),
+      longitude: new Decimal(-46.650013),
     });
 
     vi.useFakeTimers();
@@ -38,8 +38,8 @@ describe('Check-in Use Case', () => {
     const { checkIn } = await sut.execute({
       gymId: 'gym-01',
       userId: 'user-01',
-      userLatitude: 0,
-      userLongitude: 0,
+      userLatitude: -23.668619,
+      userLongitude: -46.6509271,
     });
 
     expect(checkIn.id).toEqual(expect.any(String));
@@ -51,16 +51,16 @@ describe('Check-in Use Case', () => {
     await sut.execute({
       gymId: 'gym-01',
       userId: 'user-01',
-      userLatitude: 0,
-      userLongitude: 0,
+      userLatitude: -23.668619,
+      userLongitude: -46.6509271,
     });
 
     await expect(async () => {
       await sut.execute({
         gymId: 'gym-01',
         userId: 'user-01',
-        userLatitude: 0,
-        userLongitude: 0,
+        userLatitude: -23.668619,
+        userLongitude: -46.6509271,
       });
     }).rejects.toBeInstanceOf(Error);
   });
@@ -71,8 +71,8 @@ describe('Check-in Use Case', () => {
     await sut.execute({
       gymId: 'gym-01',
       userId: 'user-01',
-      userLatitude: 0,
-      userLongitude: 0,
+      userLatitude: -23.668619,
+      userLongitude: -46.6509271,
     });
 
     vi.setSystemTime(new Date(2025, 1, 1, 8, 0, 0));
@@ -80,10 +80,30 @@ describe('Check-in Use Case', () => {
     const { checkIn } = await sut.execute({
       gymId: 'gym-01',
       userId: 'user-01',
-      userLatitude: 0,
-      userLongitude: 0,
+      userLatitude: -23.668619,
+      userLongitude: -46.6509271,
     });
 
     expect(checkIn.id).toEqual(expect.any(String));
+  });
+
+  it.only('should not be able to check in on distant gym', async () => {
+    inMemoryGymsRepository.items.push({
+      id: 'gym-02',
+      title: 'Strongly Typed',
+      description: 'Where we break in production',
+      phone: '',
+      latitude: new Decimal(-23.6690126),
+      longitude: new Decimal(-46.650013),
+    });
+
+    await expect(async () => {
+      await sut.execute({
+        gymId: 'gym-02',
+        userId: 'user-01',
+        userLatitude: -23.6678308,
+        userLongitude: -46.652909,
+      });
+    }).rejects.toBeInstanceOf(Error);
   });
 });
