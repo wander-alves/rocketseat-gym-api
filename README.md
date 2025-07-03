@@ -39,8 +39,8 @@ No nosso caso, o Diego nos mostra como ele fez o levantamento de requisitos para
 ### Regras de negócio
 
 - [x]  O usuário não deve poder se cadastrar com um e-mail já cadastrado
-- [ ]  O usuário não poderá fazer 2 check-ins no mesmo dia
-- [ ]  O usuário não poderá fazer check-in se não estiver próximo (100m) da academia
+- [x]  O usuário não poderá fazer 2 check-ins no mesmo dia
+- [x]  O usuário não poderá fazer check-in se não estiver próximo (100m) da academia
 - [ ]  O check-in só pode ser validado até 20 minutos após criado
 - [ ]  O check-in só pode ser validado por administradores
 - [ ]  A academia só poderá ser cadastrada por administradores
