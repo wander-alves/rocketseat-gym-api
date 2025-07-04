@@ -30,7 +30,7 @@ No nosso caso, o Diego nos mostra como ele fez o levantamento de requisitos para
 - [-]  Deve ser possível se autenticar
 - [x]  Deve ser possível obter o perfil de um usuário
 - [ ]  Deve ser possível obter o número de check-ins realizados pelo usuário logado
-- [ ]  Deve ser possível para o usuário obter seu histórico de check-ins
+- [x]  Deve ser possível para o usuário obter seu histórico de check-ins
 - [ ]  Deve ser possível para o usuário buscar academias próximas
 - [ ]  Deve ser possível para o usuário buscar academias pelo nome
 - [x]  Deve ser possível para o usuário realizar check-in em uma academia
@@ -43,7 +43,7 @@ No nosso caso, o Diego nos mostra como ele fez o levantamento de requisitos para
 - [x]  O usuário não poderá fazer check-in se não estiver próximo (100m) da academia
 - [ ]  O check-in só pode ser validado até 20 minutos após criado
 - [ ]  O check-in só pode ser validado por administradores
-- [ ]  A academia só poderá ser cadastrada por administradores
+- [-]  A academia só poderá ser cadastrada por administradores
 
 ### Requisitos não funcionais
 
