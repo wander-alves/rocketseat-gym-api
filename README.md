@@ -29,7 +29,7 @@ No nosso caso, o Diego nos mostra como ele fez o levantamento de requisitos para
 - [x]  Deve ser possível se cadastrar
 - [-]  Deve ser possível se autenticar
 - [x]  Deve ser possível obter o perfil de um usuário
-- [ ]  Deve ser possível obter o número de check-ins realizados pelo usuário logado
+- [x]  Deve ser possível obter o número de check-ins realizados pelo usuário logado
 - [x]  Deve ser possível para o usuário obter seu histórico de check-ins
 - [ ]  Deve ser possível para o usuário buscar academias próximas
 - [ ]  Deve ser possível para o usuário buscar academias pelo nome
