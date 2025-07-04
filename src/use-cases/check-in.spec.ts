@@ -67,7 +67,7 @@ describe('Check-in Use Case', () => {
     }).rejects.toBeInstanceOf(MaxNumberOfCheckInsError);
   });
 
-  it.only('should be able to check in twice, but in differente days', async () => {
+  it('should be able to check in twice, but in differente days', async () => {
     vi.setSystemTime(new Date(2025, 0, 31, 8, 0, 0));
 
     await sut.execute({
@@ -89,7 +89,7 @@ describe('Check-in Use Case', () => {
     expect(checkIn.id).toEqual(expect.any(String));
   });
 
-  it.only('should not be able to check in on distant gym', async () => {
+  it('should not be able to check in on distant gym', async () => {
     inMemoryGymsRepository.items.push({
       id: 'gym-02',
       title: 'Strongly Typed',
