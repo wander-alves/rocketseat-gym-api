@@ -32,7 +32,7 @@ No nosso caso, o Diego nos mostra como ele fez o levantamento de requisitos para
 - [x]  Deve ser possível obter o número de check-ins realizados pelo usuário logado
 - [x]  Deve ser possível para o usuário obter seu histórico de check-ins
 - [ ]  Deve ser possível para o usuário buscar academias próximas
-- [ ]  Deve ser possível para o usuário buscar academias pelo nome
+- [x]  Deve ser possível para o usuário buscar academias pelo nome
 - [x]  Deve ser possível para o usuário realizar check-in em uma academia
 - [ ]  Deve ser possível validar o check-in de um usuário
 
