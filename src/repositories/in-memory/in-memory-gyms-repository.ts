@@ -32,4 +32,16 @@ export class InMemoryGymsRepository implements GymsRepository {
 
     return gym;
   }
+
+  async searchMany(query: string, page: number) {
+    const perPage = 20;
+    const minIndex = (page - 1) * perPage;
+    const maxIndex = page * perPage;
+
+    const gyms = this.items
+      .filter((item) => item.title.includes(query))
+      .slice(minIndex, maxIndex);
+
+    return gyms;
+  }
 }
