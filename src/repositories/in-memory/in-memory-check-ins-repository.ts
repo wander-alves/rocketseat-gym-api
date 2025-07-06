@@ -28,12 +28,12 @@ export class InMemoryCheckInsRepository implements CheckInsRepository {
 
   async findManyByUserId(userId: string, page: number) {
     const perPage = 20;
-    const startPage = (page - 1) * perPage;
-    const endPage = page * perPage;
+    const minIndex = (page - 1) * perPage;
+    const maxIndex = page * perPage;
 
     const checkIns = this.items
       .filter((item) => item.user_id === userId)
-      .slice(startPage, endPage);
+      .slice(minIndex, maxIndex);
 
     return checkIns;
   }
