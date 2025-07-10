@@ -40,7 +40,7 @@ No nosso caso, o Diego nos mostra como ele fez o levantamento de requisitos para
 - [x] O usuário não deve poder se cadastrar com um e-mail já cadastrado
 - [x] O usuário não poderá fazer 2 check-ins no mesmo dia
 - [x] O usuário não poderá fazer check-in se não estiver próximo (100m) da academia
-- [ ] O check-in só pode ser validado até 20 minutos após criado
+- [x] O check-in só pode ser validado até 20 minutos após criado
 - [ ] O check-in só pode ser validado por administradores
 - [ ] A academia só poderá ser cadastrada por administradores
 
@@ -48,7 +48,7 @@ No nosso caso, o Diego nos mostra como ele fez o levantamento de requisitos para
 
 - [x] A senha dos usuários precisa ser criptografada
 - [x] Os dados da aplicação precisam estar persistidos em um banco PostgreSQL
-- [ ] Todas listas de dados precisam estar paginadas com 20 itens por página
+- [x] Todas listas de dados precisam estar paginadas com 20 itens por página
 - [ ] O usuário deve ser identificado por um JWT (JSON Web Token)
 
 ---
