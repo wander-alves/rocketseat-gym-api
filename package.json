@@ -15,6 +15,7 @@
   "license": "MIT",
   "description": "",
   "dependencies": {
+    "@fastify/jwt": "9.1.0",
     "@prisma/client": "6.10.1",
     "bcryptjs": "3.0.2",
     "dayjs": "1.11.13",
