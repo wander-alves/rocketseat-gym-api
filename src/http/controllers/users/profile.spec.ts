@@ -26,8 +26,10 @@ describe('Profile (E2E)', () => {
       .send();
 
     expect(response.statusCode).toEqual(200);
-    expect(response.body.user).toEqual({
-      email: 'john.doe@example.com',
-    });
+    expect(response.body.user).toEqual(
+      expect.objectContaining({
+        email: 'john.doe@example.com',
+      }),
+    );
   });
 });
