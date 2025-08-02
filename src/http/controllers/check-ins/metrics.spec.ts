@@ -14,9 +14,9 @@ describe('Check-ins Metrics (E2E)', () => {
   });
 
   it('should be able to get the count of check-ins', async () => {
-    const { token } = await createAndAuthenticateUser(app);
+    const { token } = await createAndAuthenticateUser(app, true);
 
-    const { id: gym_id } = await prisma.gym.create({
+    const gym = await prisma.gym.create({
       data: {
         title: 'JavaScript Gym',
         description: '',
@@ -31,11 +31,11 @@ describe('Check-ins Metrics (E2E)', () => {
     await prisma.checkIn.createMany({
       data: [
         {
-          gym_id,
+          gym_id: gym.id,
           user_id,
         },
         {
-          gym_id,
+          gym_id: gym.id,
           user_id,
         },
       ],
