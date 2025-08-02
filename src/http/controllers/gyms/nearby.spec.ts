@@ -38,8 +38,8 @@ describe('Nearby Gyms (E2E)', () => {
       });
 
     const response = await request(app.server)
-      .set('Authorization', `Bearer ${token}`)
       .get('/gyms/nearby')
+      .set('Authorization', `Bearer ${token}`)
       .query({
         latitude: -23.668619,
         longitude: -46.6509271,
@@ -47,8 +47,8 @@ describe('Nearby Gyms (E2E)', () => {
       .send();
 
     expect(response.statusCode).toEqual(200);
-    expect(response.statusCode).toHaveLength(1);
-    expect(response.body).toEqual([
+    expect(response.body.gyms).toHaveLength(1);
+    expect(response.body.gyms).toEqual([
       expect.objectContaining({
         title: 'Near Gym',
       }),

@@ -36,7 +36,7 @@ describe('Create Check-in (E2E)', () => {
     });
 
     const response = await request(app.server)
-      .post(`/check-ins/${checkIn.id}/validate`)
+      .patch(`/check-ins/${checkIn.id}/validate`)
       .set('Authorization', `Bearer ${token}`)
       .send({
         gym_id,

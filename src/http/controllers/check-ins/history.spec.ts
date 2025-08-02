@@ -42,13 +42,12 @@ describe('Check-ins History (E2E)', () => {
     });
 
     const response = await request(app.server)
-      .post('/check-ins/history')
+      .get('/check-ins/history')
       .set('Authorization', `Bearer ${token}`)
-      .send({
-        gym_id,
-      });
+      .send();
 
-    expect(response.statusCode).toEqual(201);
+    expect(response.statusCode).toEqual(200);
+    expect(response.body.checkIns).toHaveLength(2);
     expect(response.body.checkIns).toEqual([
       expect.objectContaining({
         gym_id,

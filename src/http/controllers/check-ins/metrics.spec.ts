@@ -42,13 +42,11 @@ describe('Check-ins Metrics (E2E)', () => {
     });
 
     const response = await request(app.server)
-      .post('/check-ins/metrics')
+      .get('/check-ins/metrics')
       .set('Authorization', `Bearer ${token}`)
-      .send({
-        gym_id,
-      });
+      .send();
 
-    expect(response.statusCode).toEqual(201);
-    expect(response.body.checkIns).toEqual(2);
+    expect(response.statusCode).toEqual(200);
+    expect(response.body.checkInsCount).toEqual(2);
   });
 });
